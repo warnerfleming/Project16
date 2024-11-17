@@ -1,35 +1,28 @@
+//Task 2
+
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ProductList from `./ProductList.jsx`
+import AddProductForm from `./AddProductForm.jsx`
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () =>{
+  const [product, set] = useState([
+{id: 1, name:`Remote`, price: 20, description: `Used with Sony V900 Models`},
+{id: 2, name:`TV`, price: 400, description: `Latest Sony Model`},
+{id: 3, name:`DvD Player`, price: 150, description: `T12 Model`},
+{id: 4, name:`TV Stand`, price: 60, description: `Holds all Sony Models`}
+])
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const addProduct = (newProduct) => {
+  setProducts([...products, {...newProduct}]);
+};
+
+return (
+  <div>
+    <h1>Product Dashboard</h1>
+    <ProductList products={products} /> 
+    <AddProductForm addProduct={addProduct} /> 
+  </div>
+);
+};
 
 export default App
