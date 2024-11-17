@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import ProductList from `./ProductList.jsx`
 import AddProductForm from `./AddProductForm.jsx`
+import  './App.css';
 
 const App = () =>{
   const [product, set] = useState([
