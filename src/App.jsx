@@ -1,8 +1,8 @@
 //Task 2
 
 import { useState } from 'react'
-import ProductList from `./ProductList.jsx`
-import AddProductForm from `./AddProductForm.jsx`
+import ProductList from './ProductList.jsx'
+import AddProductForm from './AddProductForm.jsx'
 import  './App.css';
 
 const App = () =>{
@@ -14,7 +14,7 @@ const App = () =>{
 ])
 
 const addProduct = (newProduct) => {
-  setProducts([...products, {...newProduct}]);
+  setProducts([...product, {...newProduct}]);
 };
 
 //Task 7

@@ -1,7 +1,7 @@
 // Task 3 and 5
 
-import React from `react`
-import ProductItem from `./ProductItem.jsx`
+import React from 'react'
+import ProductItem from './ProductItem.jsx'
 
 const ProductList = ({products}) => {
     return(
