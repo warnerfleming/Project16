@@ -16,6 +16,7 @@ const App = () =>{
 const addProduct = (newProduct) => {
   setProducts([...products, {...newProduct}]);
 };
+
 //Task 7
 return (
   <div>
