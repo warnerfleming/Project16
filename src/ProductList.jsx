@@ -1,4 +1,4 @@
-// Task 3
+// Task 3 and 5
 
 import React from `react`
 import ProductItem from `./ProductItem.jsx`
